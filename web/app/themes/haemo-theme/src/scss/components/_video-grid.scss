@@ -1,0 +1,25 @@
+@use "@vars/media";
+
+.video-grid {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    @media screen and (min-width: media.$screen-xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: media.$screen-sm) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (min-width: media.$screen-2xl) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__item {
+    min-width: 0;
+  }
+}

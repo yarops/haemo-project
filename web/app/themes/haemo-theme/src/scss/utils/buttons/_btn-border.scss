@@ -1,0 +1,6 @@
+.btn {
+  &--border {
+    border: 1px solid var(--app-color-button-base);
+    background-color: transparent;
+  }
+}

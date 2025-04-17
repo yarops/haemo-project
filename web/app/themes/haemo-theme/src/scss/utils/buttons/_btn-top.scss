@@ -1,0 +1,38 @@
+@use "sass:color";
+@use "@vars/base";
+@use "@vars/mixins";
+
+.btn-top {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: base.$border-radius-base;
+  background-color: var(--app-color-accent);
+
+  @include mixins.transition;
+
+  .icon {
+    position: relative;
+    top: 0;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--app-color-bg-accent);
+    transform: rotate(-90deg);
+
+    @include mixins.transition;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+
+  &:hover {
+    .icon {
+      top: -3px;
+    }
+  }
+}

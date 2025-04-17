@@ -1,0 +1,35 @@
+@use "@vars/base";
+
+.form {
+  &__accept {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 0 0.75rem;
+    line-height: 1;
+
+    input[type="checkbox"] {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: base.$border-radius-large;
+    color: var(--app-color-text);
+    outline: none;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 65px;
+    resize: none;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

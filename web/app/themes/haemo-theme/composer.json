@@ -1,0 +1,33 @@
+{
+  "name": "yarops/haemo",
+  "description": "Theme haemo",
+  "type": "wordpress-theme",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Yaroslav Popov",
+      "email": "info@codesweet.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "repositories": [
+    {
+      "url": "https://github.com/chillerlan/php-qrcode.git",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "chillerlan/php-qrcode": "dev-main"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev"
+}

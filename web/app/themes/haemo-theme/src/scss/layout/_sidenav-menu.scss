@@ -1,0 +1,45 @@
+.sidenav-menu {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: var(--app-sidenav-width);
+  background: var(--app-bg-menu);
+  box-shadow: var(--app-box-shadow);
+  border-right: 0 solid var(--app-border-color);
+  transition: all .25s ease-in-out;
+
+  &__toggler {
+    position: absolute;
+    top: 1.125rem;
+    right: -23px;
+    display: block;
+    background-color: var(--app-bg-menu);
+    border-radius: 50%;
+    height: 46px;
+    width: 46px;
+    border: 5px solid var(--app-bg-main);
+    color: var(--app-menu-item-color);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4375rem 0;
+  }
+}
+
+.admin-bar .sidenav-menu {
+  top: 46px;
+
+  @media screen and (width >= 783px) {
+    top: 32px;
+  }
+}

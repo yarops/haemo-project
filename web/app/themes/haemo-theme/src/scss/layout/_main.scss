@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: var(--app-sidenav-width);
+  transition: all .25s ease-in-out;
+  min-height: calc(100vh - var(--app-topbar-height));
+  padding: 0 1.5rem;
+}

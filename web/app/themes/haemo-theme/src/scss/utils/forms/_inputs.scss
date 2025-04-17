@@ -1,0 +1,31 @@
+@use "@vars/base";
+@use "@vars/mixins";
+
+.input,
+.textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--app-border-color-input);
+  border-radius: base.$border-radius-base;
+  background: var(--app-bg-input);
+  color: var(--app-color-input);
+  font: 400 1rem / 1 base.$font-family-base;
+  line-height: 1;
+
+  @include mixins.transition;
+
+  @include mixins.placeholder {
+    color: var(--app-color-input-placeholder);
+    font-weight: 400;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+
+  &:focus {
+    @include mixins.placeholder {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@use "@vars/base";
+@use "@vars/media";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--app-bg-main);
+  color: var(--app-color-text);
+  font-family: base.$font-family-base;
+  font-size: base.$font-size-base;
+
+  &.admin-bar {
+    padding-top: 46px;
+
+    @media screen and (width >= 783px) {
+      padding-top: 32px;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--app-heading-color);
+}
+
+.h1,h1 {
+  font-size: calc(1.34375rem + 1.125vw)
+}
+
+@media (min-width: 1200px) {
+  .h1,h1 {
+    font-size:2.1875rem
+  }
+}
+
+.h2,h2 {
+  font-size: calc(1.307rem + .684vw)
+}
+
+@media (min-width: 1200px) {
+  .h2,h2 {
+    font-size:1.82rem
+  }
+}
+
+.h3,h3 {
+  font-size: calc(1.2749999375rem + .29999925vw)
+}
+
+@media (min-width: 1200px) {
+  .h3,h3 {
+    font-size:1.499999375rem
+  }
+}
+
+.h4,h4 {
+  font-size: 1.09375rem
+}
+
+.h5,h5 {
+  font-size: .91rem
+}
+
+.h6,h6 {
+  font-size: .74375rem
+}

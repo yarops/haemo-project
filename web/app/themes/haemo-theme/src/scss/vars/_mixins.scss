@@ -1,0 +1,89 @@
+@use "sass:color";
+@use "sass:selector";
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector.append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
+
+@mixin gradient-accent {
+  background: #2987d4;
+  background: linear-gradient(45deg, #2987d4, #bc4232) 0 0 / 100% 100%;
+}
+
+@mixin button-overlay($bg) {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: $bg;
+    content: "";
+    transform: translate(-100%);
+
+    @include transition;
+  }
+
+  &:hover {
+    &::after {
+      border-radius: 0;
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 0 15px 38.34px 15.66px rgb(110 111 187 / 11%);
+}
+
+@mixin box-shadow-none {
+  box-shadow: 0 0;
+}
+
+@mixin transition {
+  transition: 0.4s ease-in-out;
+}
+
+@mixin link-card {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    inset: 0;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_js.cookie.js": {
+    "file": "js/js.cookie.js",
+    "name": "js.cookie"
+  },
+  "src/img/404.webp": {
+    "file": "img/404.webp",
+    "src": "src/img/404.webp"
+  },
+  "src/img/logo.webp": {
+    "file": "img/logo.webp",
+    "src": "src/img/logo.webp"
+  },
+  "src/svg/placeholder.svg": {
+    "file": "svg/placeholder.svg",
+    "src": "src/svg/placeholder.svg"
+  },
+  "src/ts/app.ts": {
+    "file": "js/app.js",
+    "name": "app",
+    "src": "src/ts/app.ts",
+    "isEntry": true,
+    "imports": [
+      "_js.cookie.js"
+    ],
+    "css": [
+      "css/app.css"
+    ]
+  },
+  "src/ts/player.ts": {
+    "file": "js/player.js",
+    "name": "player",
+    "src": "src/ts/player.ts",
+    "isEntry": true,
+    "imports": [
+      "_js.cookie.js"
+    ],
+    "css": [
+      "css/player.css"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+@use "@vars/media";
+@use "@vars/base";
+
+.tabs {
+  &__heading {
+    display: grid;
+
+    @media (min-width: media.$screen-md) {
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 1.5rem;
+    border-radius: base.$border-radius-large base.$border-radius-large 0 0;
+    background-color: #fff;
+    color: var(--app-color-heading);
+    font: 600 1rem / 1 base.$font-family-headings;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:last-child {
+      border-radius: 0 0 base.$border-radius-large base.$border-radius-large;
+    }
+
+    &.active {
+      background-color: var(--app-color-accent);
+      color: var(--app-color-heading-inverse);
+      pointer-events: none;
+    }
+
+    @media (min-width: media.$screen-md) {
+      background-color: transparent;
+      color: var(--app-color-heading-inverse);
+
+      &:last-child {
+        border-radius: base.$border-radius-large base.$border-radius-large 0 0;
+      }
+
+      &.active {
+        background-color: #fff;
+        color: var(--app-color-heading);
+      }
+    }
+  }
+}
+
+.tab {
+  $this: &;
+
+  padding: 1rem 0;
+  background-color: var(--app-color-bg);
+
+  &:not(#{$this}__show) {
+    display: none;
+  }
+
+  @media (min-width: media.$screen-md) {
+    padding: 2rem 0;
+  }
+}

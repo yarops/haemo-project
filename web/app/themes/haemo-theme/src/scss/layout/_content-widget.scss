@@ -1,0 +1,6 @@
+@use "@vars/base";
+
+.content-widget{
+  border-radius: base.$border-radius-large;
+  color: var(--app-color-text);
+}

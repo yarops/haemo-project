@@ -1,0 +1,28 @@
+.section-container {
+  display: flex;
+  overflow: hidden;
+  flex-flow: column nowrap;
+}
+
+.section {
+  $this: &;
+
+  &--top {
+    padding-bottom: 4rem;
+  }
+
+  &--bottom {
+    flex: 1;
+    padding-top: 1px;
+    padding-bottom: 4rem;
+    background-color: var(--app-bg-primary);
+
+    #{$this}__raised {
+      margin-top: -4rem;
+    }
+  }
+
+  &--p-top {
+    padding-top: 3rem;
+  }
+}

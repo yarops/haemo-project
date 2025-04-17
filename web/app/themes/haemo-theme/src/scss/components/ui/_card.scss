@@ -1,0 +1,41 @@
+.card {
+  --app-card-border-radius: var(--app-border-radius);
+  --app-card-bg: #fff;
+  --app-card-color: var(--app-color-text);
+
+  box-shadow: var(--app-box-shadow);
+  margin-bottom: 1.5rem;
+  background-color: var(--app-card-bg);
+  border-radius: var(--app-card-border-radius);
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__thumb {
+    border-top-left-radius: var(--app-card-border-radius);
+    border-top-right-radius: var(--app-card-border-radius);
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    color: var(--app-card-color);
+    gap: 0.5rem;
+  }
+
+  &__header {
+    padding: var(--app-card-cap-padding-y) var(--app-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--app-heading-color);
+    background-color: transparent;
+    border-bottom: 1px solid var(--app-border-color);
+  }
+
+  &__title {
+    margin: 0;
+
+    a {
+      color: var(--app-heading-color);
+      text-decoration: none;
+    }
+  }
+}
