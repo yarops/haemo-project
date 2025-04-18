@@ -9,6 +9,7 @@
  */
 
 use App\Utils;
+use App\Controllers\LibraryController;
 
 $tags = get_terms(['taxonomy' => 'haemo_video_categories']);
 ?>
@@ -37,17 +38,25 @@ $tags = get_terms(['taxonomy' => 'haemo_video_categories']);
                     class="side-nav__link"
                     href="<?php echo get_term_link($tag) ?>"
                 >
-                    <?php get_template_part('parts/icons/paperclip'); ?>
                     <?php echo Utils\Categories::getTermShortname($tag->term_id); ?>
                 </a>
                 <ul class="side-nav__sub">
                     <li class="side-nav__item">
                         <a
-                            class="side-nav__link"
-                            href=""
+                            class="side-nav__link side-nav__link--sub"
+                            href="<?php echo LibraryController::constructLibraryLink($tag, 'video'); ?>"
                         >
-                            <?php get_template_part('parts/icons/paperclip'); ?>
-                            <?php echo Utils\Categories::getTermShortname($tag->term_id); ?>
+                            <?php get_template_part('parts/icons/play'); ?>
+                            <?php echo Utils\Categories::getTermShortname($tag); ?>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a
+                            class="side-nav__link side-nav__link--sub"
+                            href="<?php echo LibraryController::constructLibraryLink($tag, 'article'); ?>"
+                        >
+                            <?php get_template_part('parts/icons/document'); ?>
+                            <?php echo Utils\Categories::getTermShortname($tag); ?>
                         </a>
                     </li>
                 </ul>

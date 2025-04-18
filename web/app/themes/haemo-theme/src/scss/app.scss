@@ -7,7 +7,7 @@
 @forward "utils/commons";
 @forward "utils/buttons";
 @forward "utils/content";
-@forward "utils/modal";
+@forward "utils/modals";
 @forward "utils/tabs";
 @forward "utils/forms";
 @forward "utils/animations";
@@ -21,6 +21,7 @@
 
 // Components
 @forward "components/ui";
+@forward "components/commons/section-title";
 @forward "components/header";
 @forward "components/navbar";
 @forward "components/search-form";

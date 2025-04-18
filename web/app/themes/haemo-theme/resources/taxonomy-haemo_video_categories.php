@@ -41,7 +41,7 @@ $article_query = new \WP_Query([
 
 get_header(); ?>
     <main class="main">
-        <h2 class="section-title"><?php echo __('Videos', 'haemo'); ?></h2>
+        <h4 class="section-title"><?php echo __('Videos', 'haemo'); ?></h4>
         <div class="video-grid">
             <div class="video-grid__items">
                 <?php
@@ -62,7 +62,7 @@ get_header(); ?>
             </div>
         </div>
 
-        <h2 class="section-title"><?php echo __('Articles', 'haemo'); ?></h2>
+        <h4 class="section-title"><?php echo __('Articles', 'haemo'); ?></h4>
         <div class="video-grid">
             <div class="video-grid__items">
                 <?php

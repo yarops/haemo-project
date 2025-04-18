@@ -35,6 +35,15 @@ $footer_logo = Utils\get_setting('cs_footer_logo');
 
 </div><!-- wrapper-->
 
+<div class="modals">
+    <div id="searchModal" class="modal fade js-modal">
+        <div class="modal__inner">
+            <?php get_search_form(); ?>
+        </div>
+    </div>
+    <div class="modals__backdrop fade js-modal-backdrop"></div>
+</div>
+
 <div class="counters">
     <?php echo Utils\get_setting('swco_counters'); ?>
 </div>

@@ -9,16 +9,13 @@
   justify-content: center;
   color: var(--app-color-headings);
   inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-  &::after {
-    position: absolute;
-    backdrop-filter: blur(40px);
-    content: "";
-    inset: 0;
-  }
-
-  &.active {
-    display: flex;
+  &.show {
+    display: block;
   }
 
   &__toggler {
@@ -34,6 +31,8 @@
     border-radius: base.$border-radius-large;
     background: var(--app-bg-main);
     text-align: center;
+    max-width: 32rem;
+    margin: 0 auto;
   }
 
   &__title {
@@ -70,4 +69,8 @@
       opacity: 0.6;
     }
   }
+}
+
+.admin-bar .modal__inner {
+  padding-top: 50px;
 }

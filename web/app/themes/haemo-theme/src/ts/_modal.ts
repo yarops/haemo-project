@@ -1,42 +1,71 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Shares
-    const modalPopup = document.querySelector('.js-modal');
-    const modalPopupTogglers = document.querySelectorAll('.js-modal-toggler');
+    // Получаем все элементы
+    const modals = document.querySelectorAll<HTMLElement>('.js-modal');
+    const togglers = document.querySelectorAll<HTMLElement>('.js-modal-toggler');
+    const backdrop = document.querySelector<HTMLElement>('.js-modal-backdrop');
+    const body = document.body;
 
-    if (!modalPopup || !modalPopupTogglers) {
-        console.log('Shares elements not found');
-        return;
-    }
+    // Обработчики на клики по фону для закрытия
+    document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
 
-    modalPopupTogglers.forEach((modalPopupToggler) => {
-        console.log('modalPopupToggler', modalPopupToggler);
-        modalPopupToggler.addEventListener('click', function (e) {
-            e.preventDefault();
-            const elToggler = e.target as HTMLElement;
-            const modalSelector = elToggler.dataset.modal;
+        const clickedInsideModal = Array.from(modals).some((modal) => {
+            return target !== modal && modal.contains(target);
+        });
+        const clickedToggler = Array.from(togglers).some((toggler) => toggler.contains(target));
 
-            console.log(modalSelector);
+        if (clickedInsideModal || clickedToggler) return;
 
-            if (!modalSelector) return;
-            const modal = document.getElementById(modalSelector);
-
-            if (!modal) return;
-            if (modal.classList.contains('active')) {
-                modal.classList.remove('active');
-            } else {
-                modal.classList.add('active');
+        modals.forEach((modal) => {
+            if (modal.classList.contains('show')) {
+                closeModal(modal);
             }
         });
     });
 
-    const modalPopupCloses = document.querySelectorAll('.js-modal-close');
-    modalPopupCloses.forEach((modalPopupClose) => {
-        modalPopupClose.addEventListener('click', function (e) {
-            e.preventDefault();
+    function openModal(modal: HTMLElement) {
+        modal.classList.add('show');
+        body.classList.add('modal-open');
 
-            const modalPopups = document.querySelectorAll('.js-modal');
-            modalPopups.forEach(el => el.classList.remove('active'));
+        if (backdrop) {
+            backdrop.classList.add('show');
+        }
+    }
+
+    function closeModal(modal: HTMLElement) {
+        modal.classList.remove('show');
+        body.classList.remove('modal-open');
+
+        if (backdrop) {
+            backdrop.classList.remove('show');
+        }
+
+        // Убираем fade после анимации, если нужно
+        setTimeout(() => {
+            modal.classList.remove('show');
+            if (backdrop) {
+                backdrop.classList.remove('show');
+            }
+        }, 300); // 300мс — длительность CSS-анимации
+    }
+
+// Навешиваем обработчики на переключатели
+    togglers.forEach((toggler) => {
+        toggler.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = toggler.getAttribute('data-target');
+            if (!targetId) return;
+
+            const modal = document.querySelector<HTMLElement>(targetId);
+            if (!modal) return;
+
+            const isOpen = modal.classList.contains('show');
+            if (isOpen) {
+                closeModal(modal);
+            } else {
+                openModal(modal);
+            }
         });
     });
 });

@@ -33,9 +33,9 @@ get_header(); ?>
     <main class="main">
 
         <div class="video-grid">
-            <h2 class="section-title">
+            <h4 class="section-title">
                 <?php echo __('Recommend For You', 'haemo'); ?>
-            </h2>
+            </h4>
             <div class="video-grid__items">
                 <?php
                 while ($gg->have_posts()) :

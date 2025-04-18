@@ -37,6 +37,7 @@ global $env;
 
     <header class="header">
         <div class="navbar">
+            <?php get_template_part('parts/page-header'); ?>
 
             <div class="navbar-panel js-navbar-panel">
                 <?php if (has_nav_menu('main_menu')) : ?>
@@ -54,18 +55,17 @@ global $env;
                 <?php endif; ?>
 
                 <div class="navbar__search">
-                    <?php get_search_form(); ?>
+
                 </div>
             </div>
 
             <button
-                class="navbar__toggler navbar-toggler js-navbar-panel-toggler"
-                aria-label="Menu"
+                class="search-form-toggler js-modal-toggler"
+                aria-label="Search toggle"
+                data-target="#searchModal"
             >
-                <?php echo Utils\Html::get_svg('menu'); ?>
-
+                <span>Search something..</span>
+                <?php get_template_part('parts/icons/magnifying-glass'); ?>
             </button>
-
         </div>
-
     </header>

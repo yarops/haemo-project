@@ -16,3 +16,23 @@
     aspect-ratio: 1 / 1;
   }
 }
+
+.search-form-toggler {
+  --app-search-toggler-bg: #eaeff3;
+  --app-search-toggler-color: #9ba6b7;
+
+  padding: 0.75rem 1.25rem;
+  line-height: 1.5;
+  background-color: var(--app-search-toggler-bg);
+  border-radius: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+  color: var(--app-search-toggler-color);
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
