@@ -103,7 +103,12 @@ add_action('get_header', 'remove_admin_bar_bump');
 add_filter('posts_request', 'disable_query_sql', 10, 2);
 function disable_query_sql($sql, $query)
 {
-    if (!is_admin() && $query->is_main_query() && is_tax('haemo_video_categories')) {
+    $type = get_query_var('type');
+    if (
+        !is_admin() && $query->is_main_query() &&
+        is_tax('haemo_video_categories') &&
+        empty($type)
+    ) {
         return ''; // или вернуть SQL, который ничего не делает
     }
     return $sql;

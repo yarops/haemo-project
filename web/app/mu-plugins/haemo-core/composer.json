@@ -1,0 +1,38 @@
+{
+  "name": "yarops/haemocore",
+  "description": "Core plugin for WP sites.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Yaroslav Popov",
+      "email": "info@codesweet.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "HaemoCore\\": "src/"
+    },
+    "files": [
+      "vendor/redux-framework/redux-core/framework.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "tgmpa/tgm-plugin-activation": "dev-develop",
+    "reduxframework/redux-framework": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/{$name}/": [
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "oomphinc/composer-installers-extender": true
+    }
+  }
+}

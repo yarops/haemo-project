@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HaemoCore\n"
+"POT-Creation-Date: 2021-10-17 12:16+0500\n"
+"PO-Revision-Date: 2021-10-17 12:16+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: core.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: src/Helpers/CS_Breadcrumbs.php:18
+msgid "Home"
+msgstr "Главная"
+
+#: src/Helpers/CS_Breadcrumbs.php:20
+#, php-format
+msgid "Search results \"%s\""
+msgstr "Результаты поиска \"%s\""
+
+#: src/Helpers/CS_Breadcrumbs.php:21
+#, php-format
+msgid "Posts with tag \"%s\""
+msgstr "Поиск по тегу \"%s\""
+
+#: src/Helpers/CS_Breadcrumbs.php:23 src/admin/options/function.options.php:58
+#: src/admin/options/function.options.php:80
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: src/Helpers/CS_Breadcrumbs.php:24
+#, php-format
+msgid "Страница %s"
+msgstr "Страница %s"
+
+#: src/Helpers/CS_Breadcrumbs.php:25
+#, php-format
+msgid "Comments page %s"
+msgstr "Страница комментарие %s"
+
+#: src/Helpers/CS_Homepage.php:35
+msgid "post"
+msgstr ""
+
+#: src/Helpers/CS_Homepage.php:44
+msgid "Front Page Post Type"
+msgstr ""
+
+#: src/Helpers/CS_Seo.php:96
+msgid "Posts with tag: "
+msgstr "Записи с тегом:"
+
+#: src/Helpers/CS_Seo.php:318 src/Helpers/CS_Seo.php:338
+msgid "SEO Title"
+msgstr ""
+
+#: src/Helpers/CS_Seo.php:322 src/Helpers/CS_Seo.php:348
+msgid "SEO Description"
+msgstr ""
+
+#: src/Helpers/CS_WP_Upgrade.php:126
+msgid "No feeds available, please visit our <a href=\""
+msgstr ""
+
+#: src/Helpers/CS_WP_Upgrade.php:151
+msgid "Insert/edit link"
+msgstr ""
+
+#: src/Helpers/CS_WP_Upgrade.php:151
+msgid "Update"
+msgstr ""
+
+#: src/Helpers/CS_WP_Upgrade.php:151
+msgid "Add Link"
+msgstr ""
+
+#: src/Helpers/CS_WP_Upgrade.php:151
+msgid "(no title)"
+msgstr ""
+
+#: src/Helpers/CS_WP_Upgrade.php:151
+msgid "No matches found."
+msgstr ""
+
+#: src/Plugin.php:122
+msgid "Sidebar Left"
+msgstr ""
+
+#: src/Plugin.php:123
+msgid "Sidebar left"
+msgstr ""
+
+#: src/PostTypes/CS_Department.php:23
+msgid "Department"
+msgstr ""
+
+#: src/PostTypes/CS_Partner.php:23
+msgid "Partners"
+msgstr ""
+
+#: src/PostTypes/CS_Product.php:25
+msgid "Products"
+msgstr "Разработки"
+
+#: src/PostTypes/CS_Team.php:25
+msgid "Team"
+msgstr ""
+
+#: src/admin/options/function.options.php:7
+msgid "Header"
+msgstr ""
+
+#: src/admin/options/function.options.php:18
+msgid "Contacts page"
+msgstr ""
+
+#: src/admin/options/function.options.php:36
+msgid "Privacy box"
+msgstr ""
+
+#: src/admin/options/function.options.php:42
+msgid "Content"
+msgstr ""
+
+#: src/admin/options/function.options.php:51
+msgid "Not found page (ru)"
+msgstr ""
+
+#: src/admin/options/function.options.php:57
+#: src/admin/options/function.options.php:79
+msgid "404 title"
+msgstr ""
+
+#: src/admin/options/function.options.php:63
+#: src/admin/options/function.options.php:85
+msgid "404 content"
+msgstr ""
+
+#: src/admin/options/function.options.php:64
+#: src/admin/options/function.options.php:86
+msgid "Page not found"
+msgstr ""
+
+#: src/admin/options/function.options.php:73
+msgid "Not found page (en)"
+msgstr ""
+
+#: src/admin/options/function.options.php:97
+msgid "Footer"
+msgstr ""
+
+#: src/admin/options/function.options.php:103
+msgid "Copyright"
+msgstr ""
+
+#: src/admin/options/function.options.php:109
+msgid "Счетчики"
+msgstr ""
+
+#: src/admin/options/functions.php:64
+msgid "Theme Information 1"
+msgstr ""
+
+#: src/admin/options/functions.php:65 src/admin/options/functions.php:71
+msgid "This is the tab content, HTML is allowed."
+msgstr ""
+
+#: src/admin/options/functions.php:70
+msgid "Theme Information 2"
+msgstr ""
+
+#: src/admin/options/functions.php:75
+msgid "This is the sidebar content, HTML is allowed."
+msgstr ""
+
+#: src/admin/options/functions.php:91 src/admin/options/functions.php:99
+#: src/admin/options/functions.php:100
+msgid "Theme Options"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "HaemoCore"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Setup HaemoCore."
+msgstr ""

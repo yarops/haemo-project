@@ -15,6 +15,7 @@ use App\Modules\Likes;
 use App\Modules\Promo;
 use App\Modules\Rating;
 use App\Modules\Related;
+use function App\Utils\get_setting;
 
 /**
  * App class of App
@@ -27,6 +28,13 @@ class App
      * @var object
      */
     public $env;
+
+    /**
+     * App path
+     *
+     * @var string
+     */
+    public $appPath;
 
     /**
      * Images object
@@ -52,16 +60,9 @@ class App
     /**
      * Rating object
      *
-     * @var object
+     * @var object[]
      */
-    public $rating;
-
-    /**
-     * Likes object
-     *
-     * @var likes
-     */
-    public $likes;
+    public $queryArgs;
 
     /**
      * Instance of app.
@@ -77,12 +78,11 @@ class App
     {
         require_once "Utils/theme-functions.php";
 
+        $this->appPath = trailingslashit(__DIR__);
         $this->env = new Env();
         $this->images = new Images();
         $this->comments = new Comments();
         $this->recaptcha = new Recaptcha();
-        $this->rating = new Rating();
-        $this->likes = new Likes();
 
         new LibraryController();
         new Assets();
