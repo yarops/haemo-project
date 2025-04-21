@@ -1,0 +1,14 @@
+.player {
+  display: grid;
+  margin: 0 0 1rem;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+
+  &__content {
+    min-width: 0;
+  }
+
+  .card {
+    height: 100%;
+  }
+}

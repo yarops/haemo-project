@@ -47,7 +47,7 @@ $tags = get_terms(['taxonomy' => 'haemo_video_categories']);
                             href="<?php echo LibraryController::constructLibraryLink($tag, 'video'); ?>"
                         >
                             <?php get_template_part('parts/icons/play'); ?>
-                            <?php echo Utils\Categories::getTermShortname($tag); ?>
+                            <?php echo __('Videos', 'haemo'); ?>
                         </a>
                     </li>
                     <li class="side-nav__item">
@@ -56,7 +56,7 @@ $tags = get_terms(['taxonomy' => 'haemo_video_categories']);
                             href="<?php echo LibraryController::constructLibraryLink($tag, 'article'); ?>"
                         >
                             <?php get_template_part('parts/icons/document'); ?>
-                            <?php echo Utils\Categories::getTermShortname($tag); ?>
+                            <?php echo __('Articles', 'haemo'); ?>
                         </a>
                     </li>
                 </ul>

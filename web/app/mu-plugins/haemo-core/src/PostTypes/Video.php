@@ -14,9 +14,9 @@ namespace HaemoCore\PostTypes;
  */
 class Video
 {
-    function __construct()
+    public function __construct()
     {
-        $this->video_posttype();
+        $this->videoPostTypeRegister();
     }
 
     /**
@@ -24,22 +24,25 @@ class Video
      *
      * @return void
      */
-    function video_posttype(): void
+    public function videoPostTypeRegister(): void
     {
-
         register_post_type('haemo_video', [
-                'label'              => __('Video', 'haemo-core'),
-                'public'             => true,
-                'show_ui'            => true,
-                'show_in_nav_menus'  => true,
-                'show_in_rest'       => true,
-                'hierarchical'       => false,
-                'has_archive'        => false,
-                'rewrite'            => false,
-                'publicly_queryable' => false,
-                'supports'           => [
-                    'title',
-                ],
-            ]);
+            'label'              => __('Video', 'haemo-core'),
+            'public'             => true,
+            'show_ui'            => true,
+            'show_in_nav_menus'  => true,
+            'show_in_rest'       => true,
+            'hierarchical'       => false,
+            'has_archive'        => false,
+            'rewrite'            => [
+                'slug' => 'video',
+            ],
+            'publicly_queryable' => true,
+            'supports'           => [
+                'title',
+                'thumbnail',
+                'editor',
+            ],
+        ]);
     }
 }

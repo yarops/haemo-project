@@ -3,12 +3,12 @@
   --app-card-bg: #fff;
   --app-card-color: var(--app-color-text);
 
-  box-shadow: var(--app-box-shadow);
-  margin-bottom: 1.5rem;
-  background-color: var(--app-card-bg);
-  border-radius: var(--app-card-border-radius);
   display: flex;
   flex-flow: column nowrap;
+  border-radius: var(--app-card-border-radius);
+  margin-bottom: 1.5rem;
+  background-color: var(--app-card-bg);
+  box-shadow: var(--app-box-shadow);
 
   &__thumb {
     border-top-left-radius: var(--app-card-border-radius);
@@ -23,11 +23,11 @@
   }
 
   &__header {
-    padding: var(--app-card-cap-padding-y) var(--app-card-cap-padding-x);
-    margin-bottom: 0;
-    color: var(--app-heading-color);
-    background-color: transparent;
+    padding: 1rem 1.25rem;
     border-bottom: 1px solid var(--app-border-color);
+    margin-bottom: 0;
+    background-color: transparent;
+    color: var(--app-heading-color);
   }
 
   &__title {
@@ -37,5 +37,9 @@
       color: var(--app-heading-color);
       text-decoration: none;
     }
+  }
+
+  &__footer {
+    padding: 1rem 1.25rem;
   }
 }

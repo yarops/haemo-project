@@ -1,0 +1,11 @@
+.btn {
+  &--link {
+    background-color: transparent;
+    color: var(--app-bg-button-base);
+
+    &:hover {
+      border-color: var(--app-bg-button-base-hover);
+      background-color: transparent;
+    }
+  }
+}

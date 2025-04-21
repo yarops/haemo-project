@@ -1,4 +1,6 @@
 .side-nav {
+  $this: &;
+
   padding-top: 12px;
   padding-left: 0;
   list-style-type: none;
@@ -35,6 +37,14 @@
     &--sub {
       text-transform: initial;
       color: var(--app-menu-item-color);
+      font-size: 0.875rem;
+
+      svg {
+        width: 0.875rem;
+        height: 0.875rem;
+        position: relative;
+        top: -1px;
+      }
     }
   }
 }

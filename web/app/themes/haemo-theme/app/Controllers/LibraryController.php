@@ -33,6 +33,7 @@ class LibraryController
         $this->libraryRewriteRules();
         // add_action('wp_loaded', [$this, 'libraryRewriteRules']);
         add_action('template_redirect', [$this, 'libraryTemplateInclude']);
+        add_action('pre_get_posts', [$this, 'libraryTaxonomyFilter']);
     }
 
     /**
@@ -91,11 +92,30 @@ class LibraryController
     }
 
     /**
+     * Filter library tax
+     *
+     * @param $q
+     * @return void
+     */
+    public function libraryTaxonomyFilter($q): void
+    {
+        $type = get_query_var('type');
+
+        if (
+            !is_admin() &&
+            is_tax('haemo_video_categories') &&
+            !empty($type)
+        ) {
+            $q->set('post_type', 'haemo_' . $type);
+        }
+    }
+
+    /**
      * Include taxonomy template
      *
      * @return void
      */
-    public function libraryTemplateInclude()
+    public function libraryTemplateInclude(): void
     {
         $type = get_query_var('type');
 

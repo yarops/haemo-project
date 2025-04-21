@@ -13,31 +13,26 @@ $fonts-path: "../fonts"; // fonts path
   --app-bg-main: #f0f4f7; // u
   --app-bg-menu: #fff;
   --app-border-color: #e7e9eb;
-  --app-box-shadow: 0 0 15px 0 rgba(154, 161, 171, 0.05);
+  --app-box-shadow: 0 0 15px 0 rgb(154 161 171 / 5%);
   --app-bg-accent: #2E2738; // u
   --app-color-border: #000;
   --app-border: #eff6ff1a;
-  --app-color-rating-default: #fdfbea;
-  --app-color-rating-current: #e7a44c;
-
   --app-menu-item-font-size: 0.925rem;
   --app-menu-item-color: #6c757d;
   --app-menu-item-hover-color: #188ae2;
-  --app-menu-item-hover-bg: rgba(24, 138, 226, 0.1);
-
+  --app-menu-item-hover-bg: rgb(24 138 226 / 10%);
   --app-border-radius: 0.3125rem;
 
   // Typography
   --app-color-text: #4c4c5c; //u
   --app-heading-color: #4c4c5c; // u
-  --app-color-accent: #5EC1F1;
-  --app-color-link: #5EC1F1;
+  --app-color-accent: #188ae2;
+  --app-color-link: #188ae2;
   --app-color-breadcrumbs: #b7b7b7;
 
   /* Buttons */
-  --app-bg-button-base: #DF1695;
-  --app-bg-button-base-63: color.adjust(#DF1695, $alpha: 0.63);
-  --app-bg-button-base-hover: #5EC1F1;
+  --app-bg-button-base: #EB8B7E;
+  --app-bg-button-base-hover: #{color.adjust(#EB8B7E, $lightness: -10%)};
   --app-color-button-base: #fff;
   --app-bg-button-accent: #5EC1F1;
 

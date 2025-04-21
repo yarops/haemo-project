@@ -113,3 +113,12 @@ function disable_query_sql($sql, $query)
     }
     return $sql;
 }
+
+add_action('wp_head', 'disableRefferer');
+
+function disableRefferer()
+{
+    if (is_singular('haemo_video')) {
+        echo '<meta name="referrer" content="no-referrer" />';
+    }
+}

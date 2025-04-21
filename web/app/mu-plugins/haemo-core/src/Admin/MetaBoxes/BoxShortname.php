@@ -36,7 +36,7 @@ class BoxShortname
         acf_add_local_field_group(
             [
                 'key'                   => 'haemo_box_shortname',
-                'title'                 => 'Category options',
+                'title'                 => 'Commons options',
                 'fields'                => [
                     [
                         'key'         => 'swco_all_shortname',

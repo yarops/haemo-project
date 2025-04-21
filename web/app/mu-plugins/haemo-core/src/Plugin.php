@@ -91,7 +91,7 @@ class Plugin
     public function addImageSizes(): void
     {
 
-        set_post_thumbnail_size('230', '160', true);
+        set_post_thumbnail_size('320', '240', true);
         add_image_size('small-thumb', '180', '90', true);
         add_image_size('icon-thumb', '150', '150', true);
     }
@@ -132,6 +132,6 @@ class Plugin
     {
         new PostTypes\LibraryCategories();
         new PostTypes\Video();
-        new PostTypes\Aricle();
+        new PostTypes\Article();
     }
 }

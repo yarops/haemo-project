@@ -12,12 +12,12 @@
   align-items: center;
   justify-content: center;
   padding: calc(0.75rem + 2px) 1.5rem calc(0.75rem - 1px);
-  border: 0;
+  border: 2px solid transparent;
   border-radius: base.$border-radius-base;
   background-color: var(--app-bg-button-base);
   color: var(--app-color-button-base);
   cursor: pointer;
-  font: 600 1.125rem / 1 base.$font-family-headings;
+  font: 600 1rem / 1 base.$font-family-headings;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
   &:hover,
   &:focus,
   &:active {
-    opacity: 0.8;
+    background-color: var(--app-bg-button-base-hover);
     text-decoration: none;
   }
 

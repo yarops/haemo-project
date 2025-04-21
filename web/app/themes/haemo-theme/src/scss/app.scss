@@ -10,6 +10,7 @@
 @forward "utils/modals";
 @forward "utils/tabs";
 @forward "utils/forms";
+@forward "utils/video-js";
 @forward "utils/animations";
 
 // Layout
@@ -27,3 +28,4 @@
 @forward "components/search-form";
 @forward "components/video-grid";
 @forward "components/side-nav";
+@forward "components/player";
