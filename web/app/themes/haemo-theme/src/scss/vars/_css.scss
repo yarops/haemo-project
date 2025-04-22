@@ -13,7 +13,7 @@ $fonts-path: "../fonts"; // fonts path
   --app-light: #eef2f7;
   --app-light-rgb: 238, 242, 247;
   --app-bg-main: #f0f4f7; // u
-  --app-bg-menu: #fff;
+  --app-menu-bg: #fff;
   --app-border-color: #e7e9eb;
   --app-box-shadow: 0 0 15px 0 rgb(154 161 171 / 5%);
   --app-bg-accent: #2E2738; // u
@@ -27,6 +27,7 @@ $fonts-path: "../fonts"; // fonts path
   /* Borders */
   --app-border-radius: 0.3125rem;
   --app-border-width: 1px;
+  --app-base-border-radius: 0.3125rem;
 
   // Typography
   --app-color-text: #4c4c5c; //u

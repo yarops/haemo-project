@@ -1,17 +1,19 @@
 @use "@vars/base";
 
 .navbar {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
+  display: flex;
   height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: var(--app-base-border-radius);
+  background-color: transparent;
   gap: 1.5rem;
 
   &__item {
-    height: var(--app-topbar-height);
     display: flex;
+    height: var(--app-topbar-height);
     flex-flow: row nowrap;
     align-items: center;
 
@@ -21,7 +23,11 @@
   }
 
   &__title {
-    font: 600 1.125rem / 1.1 base.$font-family-base;
     margin: 0 0 0 1rem;
+    font: 600 1.125rem / 1.1 base.$font-family-base;
+  }
+
+  &.scrolled {
+    background-color: var(--app-menu-bg);
   }
 }

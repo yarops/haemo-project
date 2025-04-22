@@ -1,12 +1,12 @@
 .sidenav-menu {
-  z-index: 1000;
   position: fixed;
-  bottom: 0;
+  z-index: 1000;
   top: 0;
+  bottom: 0;
   width: var(--app-sidenav-width);
-  background: var(--app-bg-menu);
-  box-shadow: var(--app-box-shadow);
   border-right: 0 solid var(--app-border-color);
+  background: var(--app-menu-bg);
+  box-shadow: var(--app-box-shadow);
   transition: all .25s ease-in-out;
 
   &__toggler {
@@ -14,11 +14,11 @@
     top: 1.125rem;
     right: -23px;
     display: block;
-    background-color: var(--app-bg-menu);
-    border-radius: 50%;
-    height: 46px;
     width: 46px;
+    height: 46px;
     border: 5px solid var(--app-bg-main);
+    border-radius: 50%;
+    background-color: var(--app-menu-bg);
     color: var(--app-menu-item-color);
 
     svg {
