@@ -1,0 +1,161 @@
+# Copyright (C) 2025 Yaroslav Popov
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Haemo Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/haemo-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-22T06:24:19+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: haemo\n"
+
+#. Theme Name of the theme
+#: resources
+msgid "Haemo Theme"
+msgstr ""
+
+#. Description of the theme
+#: resources
+msgid "The 2025 responsive theme for SITENAME"
+msgstr ""
+
+#. Author of the theme
+#: resources
+msgid "Yaroslav Popov"
+msgstr ""
+
+#. Author URI of the theme
+#: resources
+msgid "https://codesweet.ru/"
+msgstr ""
+
+#: app/Comments.php:105
+msgid "Pingback:"
+msgstr ""
+
+#: app/Comments.php:118
+msgid "<div class=\"comment-author__details\"><span>%s</span><cite class=\"fn\">%s:</cite></div>"
+msgstr ""
+
+#: app/Comments.php:127
+msgid "(Edit)"
+msgstr ""
+
+#: app/Comments.php:135
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: app/Data/TypeData.php:9
+msgid "Video"
+msgstr ""
+
+#: app/Data/TypeData.php:14
+msgid "Article"
+msgstr ""
+
+#: resources/404.php:24
+msgid "Error 404"
+msgstr ""
+
+#: resources/404.php:38
+msgid "<p>Sorry, page not found</p>"
+msgstr ""
+
+#: resources/404.php:43
+msgid "Go to homepage"
+msgstr ""
+
+#: resources/comments.php:85
+msgid "Email"
+msgstr ""
+
+#: resources/functions.php:13
+msgid "Error locating autoloader. Please run <code>composer install</code>."
+msgstr ""
+
+#: resources/haemo-taxonomy-library.php:20
+#: resources/parts/sidenav-menu.php:50
+#: resources/taxonomy-haemo_video_categories.php:44
+msgid "Videos"
+msgstr ""
+
+#: resources/parts/comments.php:17
+msgid "Comments"
+msgstr ""
+
+#: resources/parts/page-head.php:40
+msgid " Comments"
+msgstr ""
+
+#: resources/parts/privacy-popup.php:17
+msgid "privacy policy"
+msgstr ""
+
+#: resources/parts/privacy-popup.php:20
+msgid "Accept"
+msgstr ""
+
+#: resources/parts/privacy-popup.php:21
+msgid "Decline"
+msgstr ""
+
+#: resources/parts/sidenav-menu.php:59
+#: resources/taxonomy-haemo_video_categories.php:65
+msgid "Articles"
+msgstr ""
+
+#: resources/search.php:24
+msgid "Search results: "
+msgstr ""
+
+#: resources/single-haemo_article.php:29
+msgid "Authors"
+msgstr ""
+
+#: resources/single-haemo_article.php:40
+#: resources/single-haemo_video.php:50
+msgid "Description"
+msgstr ""
+
+#: resources/single-haemo_article.php:49
+#: resources/single-haemo_article.php:51
+#: resources/single-haemo_video.php:59
+#: resources/single-haemo_video.php:61
+msgid "Download"
+msgstr ""
+
+#: resources/single-haemo_article.php:57
+#: resources/single-haemo_article.php:59
+#: resources/single-haemo_video.php:67
+#: resources/single-haemo_video.php:69
+msgid "Copy link"
+msgstr ""
+
+#: resources/tag.php:55
+msgid "All tags"
+msgstr ""
+
+#: resources/taxonomy-haemo_video_categories.php:71
+msgid "Title"
+msgstr ""
+
+#: resources/taxonomy-haemo_video_categories.php:72
+msgid "Date"
+msgstr ""
+
+#: resources/taxonomy-haemo_video_categories.php:73
+msgid "Actions"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Home"
+msgstr ""
+
+#: resources/tmpl-page-home.php:37
+msgid "Recommend For You"
+msgstr ""

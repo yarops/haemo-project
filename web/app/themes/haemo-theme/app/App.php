@@ -15,6 +15,7 @@ use App\Modules\Likes;
 use App\Modules\Promo;
 use App\Modules\Rating;
 use App\Modules\Related;
+
 use function App\Utils\get_setting;
 
 /**
@@ -88,8 +89,7 @@ class App
         new Assets();
         new Mailsender();
 
-        add_action('after_setup_theme', [$this, 'load_textdomain']);
-        add_action('template_redirect', [$this, 'template_loaders']);
+        add_action('after_setup_theme', [$this, 'loadTextdomain']);
     }
 
     /**
@@ -111,18 +111,8 @@ class App
      *
      * @return void
      */
-    function load_textdomain()
+    public function loadTextdomain(): void
     {
         load_theme_textdomain('haemo', get_template_directory() . '/languages');
-    }
-
-    /**
-     * Load objects after WP query
-     *
-     * @return void
-     */
-    function template_loaders()
-    {
-
     }
 }
