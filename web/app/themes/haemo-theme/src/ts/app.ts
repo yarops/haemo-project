@@ -1,5 +1,5 @@
 import "@/scss/app.scss";
-import "@/img/logo.webp";
+import "@/img/logo_157x36.webp";
 import "@/img/404.webp";
 import "@/svg/placeholder.svg";
 

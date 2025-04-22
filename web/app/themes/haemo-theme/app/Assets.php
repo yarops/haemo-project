@@ -158,7 +158,7 @@ class Assets
 
     public function add_module_attr(string $tag, string $handle, string $src)
     {
-        if (in_array($handle, ['vite', 'app', 'player'])) {
+        if (in_array($handle, ['vite', 'app'])) {
             return '<script type="module" src="' . esc_url($src) . '" defer></script>';
         }
         return $tag;

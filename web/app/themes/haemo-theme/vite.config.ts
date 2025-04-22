@@ -21,7 +21,7 @@ const config: UserConfig = {
         manifest: true,
         outDir: 'resources/dist',
         rollupOptions: {
-            input: ['src/ts/app.ts', 'src/ts/player.ts'],
+            input: ['src/ts/app.ts'],
             output: {
                 entryFileNames: `js/[name].js`,
                 chunkFileNames: `js/[name].js`,
