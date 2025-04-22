@@ -19,11 +19,12 @@
 @forward "layout/sidenav-menu";
 @forward "layout/section";
 @forward "layout/content-widget";
+@forward "layout/header";
+@forward "layout/footer";
 
 // Components
 @forward "components/ui";
 @forward "components/commons/section-title";
-@forward "components/header";
 @forward "components/navbar";
 @forward "components/search-form";
 @forward "components/video-grid";

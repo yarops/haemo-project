@@ -7,6 +7,10 @@
   transform: translateX(0);
   transition: all .25s ease-in-out;
 
+  @media (min-width: media.$screen-md) {
+    transform: translateX(0) !important;
+  }
+
   &.active {
     transform: translateX(var(--app-sidenav-width));
   }

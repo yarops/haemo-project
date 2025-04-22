@@ -12,8 +12,8 @@
   transform: translateX(var(--app-sidenav-translate));
   transition: all .25s ease-in-out;
 
-  @media screen and (min-width: media.$screen-sm) {
-    transform: translateX(0);
+  @media screen and (min-width: media.$screen-md) {
+    transform: translateX(0) !important;
   }
 
   &__toggler {
@@ -40,12 +40,16 @@
     align-items: center;
     padding: 1.4375rem 0 1.4375rem 1.5625rem;
   }
-}
 
-.admin-bar .sidenav-menu {
-  top: 46px;
-
-  @media screen and (width >= 783px) {
-    top: 32px;
+  &.active {
+    transform: translateX(var(--app-sidenav-translate));
   }
 }
+
+//.admin-bar .sidenav-menu {
+//  top: 46px;
+//
+//  @media screen and (width >= 783px) {
+//    top: 32px;
+//  }
+//}

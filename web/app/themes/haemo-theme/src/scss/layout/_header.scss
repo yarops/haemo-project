@@ -10,7 +10,7 @@
   margin-left: var(--app-layour-shift);
   transition: all .2s ease-in-out;
 
-  @media screen and (min-width: media.$screen-sm) {
+  @media screen and (min-width: media.$screen-md) {
     margin-left: var(--app-sidenav-width);
   }
 }
