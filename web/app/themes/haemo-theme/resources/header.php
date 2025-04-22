@@ -32,7 +32,7 @@ global $env;
 
 <body <?php body_class(); ?>>
 
-<div class="wrapper">
+<div class="wrapper js-wrapper">
     <?php get_template_part('parts/sidenav-menu'); ?>
 
     <header class="header">

@@ -10,5 +10,6 @@ import "./_player.ts";
 import "./_privacy.ts";
 import "./_searchform.ts";
 import "./_totop.ts";
+import "./_sidenav.ts";
 
 

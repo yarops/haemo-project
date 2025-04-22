@@ -1,3 +1,5 @@
+@use "@vars/media";
+
 .header {
   position: sticky;
   z-index: 100;
@@ -5,8 +7,12 @@
   min-height: var(--app-topbar-height);
   padding: 0 1.5rem;
   border: 0 solid var(--app-border-color);
-  margin-left: var(--app-sidenav-width);
+  margin-left: var(--app-layour-shift);
   transition: all .2s ease-in-out;
+
+  @media screen and (min-width: media.$screen-sm) {
+    margin-left: var(--app-sidenav-width);
+  }
 }
 
 .admin-bar {

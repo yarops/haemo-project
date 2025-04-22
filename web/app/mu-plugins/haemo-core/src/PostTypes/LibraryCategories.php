@@ -46,7 +46,10 @@ class LibraryCategories
         ];
         $args = [
             'labels'       => $labels,
+            'show_ui' => true,
+            'show_in_rest' => true,
             'hierarchical' => true,
+            'publicly_queryable' => true,
             'rewrite'      => [
                 'slug' => 'lib-category',
             ],

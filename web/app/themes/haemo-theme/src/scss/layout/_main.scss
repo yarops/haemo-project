@@ -1,9 +1,15 @@
+@use "@vars/media";
+
 .main {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  margin-left: var(--app-sidenav-width);
-  transition: all .25s ease-in-out;
+  display: flex;
   min-height: calc(100vh - var(--app-topbar-height));
+  flex-direction: column;
   padding: 0 1.5rem;
+  margin-left: var(--app-layour-shift);
+  transition: all .25s ease-in-out;
+
+  @media screen and (min-width: media.$screen-sm) {
+    margin-left: var(--app-sidenav-width);
+  }
 }
