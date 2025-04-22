@@ -82,7 +82,7 @@ msgid "Error locating autoloader. Please run <code>composer install</code>."
 msgstr ""
 
 #: resources/haemo-taxonomy-library.php:20 resources/parts/sidenav-menu.php:50
-#: resources/taxonomy-haemo_video_categories.php:44
+#: resources/taxonomy-haemo_library_category.php:44
 msgid "Videos"
 msgstr "Видео"
 
@@ -107,7 +107,7 @@ msgid "Decline"
 msgstr "Отклонить"
 
 #: resources/parts/sidenav-menu.php:59
-#: resources/taxonomy-haemo_video_categories.php:65
+#: resources/taxonomy-haemo_library_category.php:65
 msgid "Articles"
 msgstr "Статьи"
 
@@ -137,15 +137,15 @@ msgstr "Скопировать ссылку"
 msgid "All tags"
 msgstr "Все теги"
 
-#: resources/taxonomy-haemo_video_categories.php:71
+#: resources/taxonomy-haemo_library_category.php:71
 msgid "Title"
 msgstr "Название"
 
-#: resources/taxonomy-haemo_video_categories.php:72
+#: resources/taxonomy-haemo_library_category.php:72
 msgid "Date"
 msgstr "Дата"
 
-#: resources/taxonomy-haemo_video_categories.php:73
+#: resources/taxonomy-haemo_library_category.php:73
 msgid "Actions"
 msgstr "Ссылки"
 

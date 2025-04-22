@@ -93,7 +93,7 @@ add_action('get_header', 'remove_admin_bar_bump');
 
 
 //function disable_taxonomy_query($query) {
-//    if (!is_admin() && $query->is_main_query() && is_tax('haemo_video_categories')) {
+//    if (!is_admin() && $query->is_main_query() && is_tax('haemo_library_category')) {
 //        // Отключаем выборку постов
 //        $query->set('post__in', [0]); // Гарантирует, что ничего не будет найдено
 //    }
@@ -106,7 +106,7 @@ function disable_query_sql($sql, $query)
     $type = get_query_var('type');
     if (
         !is_admin() && $query->is_main_query() &&
-        is_tax('haemo_video_categories') &&
+        is_tax('haemo_library_category') &&
         empty($type)
     ) {
         return ''; // или вернуть SQL, который ничего не делает

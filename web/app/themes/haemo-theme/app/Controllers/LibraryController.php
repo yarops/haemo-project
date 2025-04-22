@@ -82,7 +82,7 @@ class LibraryController
 
         add_rewrite_rule(
             '^lib-category\/([^/]+)\/type\/([^/]+)\/?$',
-            'index.php?haemo_video_categories=$matches[1]&type=$matches[2]',
+            'index.php?haemo_library_category=$matches[1]&type=$matches[2]',
             'top'
         );
 
@@ -103,7 +103,7 @@ class LibraryController
 
         if (
             !is_admin() &&
-            is_tax('haemo_video_categories') &&
+            is_tax('haemo_library_category') &&
             !empty($type)
         ) {
             $q->set('post_type', 'haemo_' . $type);
@@ -119,7 +119,7 @@ class LibraryController
     {
         $type = get_query_var('type');
 
-        if (is_tax('haemo_video_categories') && !empty($type)) {
+        if (is_tax('haemo_library_category') && !empty($type)) {
             global $wp_query;
 
             include get_stylesheet_directory() . '/haemo-taxonomy-library.php';
@@ -140,7 +140,7 @@ class LibraryController
             return '';
         }
 
-        $term_link = get_term_link($term, 'haemo_video_categories');
+        $term_link = get_term_link($term, 'haemo_library_category');
 
         if ('' !== get_option('permalink_structure')) {
             return user_trailingslashit($term_link . 'type/' . $type);

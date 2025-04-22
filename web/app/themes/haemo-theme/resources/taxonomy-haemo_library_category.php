@@ -20,7 +20,7 @@ $video_query = new \WP_Query([
     'posts_per_page' => get_option('posts_per_page'),
     'tax_query'      => [
         [
-            'taxonomy' => 'haemo_video_categories',
+            'taxonomy' => 'haemo_library_category',
             'field'    => 'slug',
             'terms'    => $term_slug,
         ],
@@ -32,7 +32,7 @@ $article_query = new \WP_Query([
     'posts_per_page' => get_option('posts_per_page'),
     'tax_query'      => [
         [
-            'taxonomy' => 'haemo_video_categories',
+            'taxonomy' => 'haemo_library_category',
             'field'    => 'slug',
             'terms'    => $term_slug,
         ],

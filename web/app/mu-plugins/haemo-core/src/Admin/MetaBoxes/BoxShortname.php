@@ -64,7 +64,7 @@ class BoxShortname
                         [
                             'param'    => 'taxonomy',
                             'operator' => '==',
-                            'value'    => 'haemo_video_categories',
+                            'value'    => 'haemo_library_category',
                         ],
                     ],
                     [

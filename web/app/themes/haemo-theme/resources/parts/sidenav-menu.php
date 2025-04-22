@@ -11,7 +11,7 @@
 use App\Utils;
 use App\Controllers\LibraryController;
 
-$tags = get_terms(['taxonomy' => 'haemo_video_categories']);
+$tags = get_terms(['taxonomy' => 'haemo_library_category']);
 ?>
 <div class="sidenav-menu js-sidenav">
     <button class="sidenav-menu__toggler js-sidenav-toggler">

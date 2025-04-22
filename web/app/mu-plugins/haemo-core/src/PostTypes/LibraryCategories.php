@@ -54,6 +54,7 @@ class LibraryCategories
                 'slug' => 'lib-category',
             ],
         ];
-        register_taxonomy('haemo_video_categories', ['haemo_video', 'haemo_article'], $args);
+
+        register_taxonomy('haemo_library_category', ['haemo_video', 'haemo_article'], $args);
     }
 }
