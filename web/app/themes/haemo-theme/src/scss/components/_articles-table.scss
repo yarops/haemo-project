@@ -1,0 +1,20 @@
+.articles-table {
+  &__link {
+    color: var(--app-color-link);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__action {
+    display: block;
+    color: var(--app-color-link);
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

@@ -27,49 +27,74 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  color: var(--app-heading-color);
   font-weight: 500;
   line-height: 1.1;
-  color: var(--app-heading-color);
 }
 
-.h1,h1 {
+.h1, h1 {
   font-size: calc(1.34375rem + 1.125vw)
 }
 
-@media (min-width: 1200px) {
-  .h1,h1 {
-    font-size:2.1875rem
+@media (width >= 1200px) {
+  .h1, h1 {
+    font-size: 2.1875rem
   }
 }
 
-.h2,h2 {
+.h2, h2 {
   font-size: calc(1.307rem + .684vw)
 }
 
-@media (min-width: 1200px) {
-  .h2,h2 {
-    font-size:1.82rem
+@media (width >= 1200px) {
+  .h2, h2 {
+    font-size: 1.82rem
   }
 }
 
-.h3,h3 {
+.h3, h3 {
   font-size: calc(1.2749999375rem + .29999925vw)
 }
 
-@media (min-width: 1200px) {
-  .h3,h3 {
-    font-size:1.499999375rem
+@media (width >= 1200px) {
+  .h3, h3 {
+    font-size: 1.499999375rem
   }
 }
 
-.h4,h4 {
+.h4, h4 {
   font-size: 1.09375rem
 }
 
-.h5,h5 {
-  font-size: .91rem
+.h5, h5 {
+  font-size: 0.91rem;
 }
 
-.h6,h6 {
-  font-size: .74375rem
+.h6, h6 {
+  font-size: 0.74375rem;
+}
+
+table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  vertical-align: middle;
+}
+
+caption {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  color: var(--ct-secondary-color);
+  text-align: left;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-width: 0;
+  border-style: solid;
+  border-color: inherit;
+  vertical-align: middle;
 }
