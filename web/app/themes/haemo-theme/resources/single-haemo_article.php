@@ -25,31 +25,21 @@ get_header(); ?>
 
             <div class="player">
                 <div class="player__content">
-                    <video
-                        id="js-player"
-                        class="video-js"
-                        controls
-                        preload="auto"
-                        poster="<?php the_post_thumbnail_url('full'); ?>"
-                        data-setup='{"fluid": true}'
-                    >
-                        <source src="<?php echo $diskLink; ?>" type="video/mp4"></source>
-                        <!--                <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>-->
-                        <!--                <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>-->
-                        <p class="vjs-no-js">
-                            To view this video please enable JavaScript, and consider upgrading to a
-                            web browser that
-                            <a href="https://videojs.com/html5-video-support/" target="_blank">
-                                supports HTML5 video
-                            </a>
-                        </p>
-                    </video>
+                    <div class="card">
+                        <h4 class="card__header"><?php echo __('Authors', 'haemo'); ?></h4>
+                        <div class="card__body content">
+                            <?php echo apply_filters('the_content', get_field('article_authors')); ?>
+                        </div>
+                        <div class="card__footer">
+                            <?php echo apply_filters('the_content', get_field('article_authors_info')); ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="player__description">
                     <div class="card">
                         <h4 class="card__header"><?php echo __('Description', 'haemo'); ?></h4>
                         <div class="card__body content">
-                            <?php the_content(); ?>
+
                         </div>
                         <div class="card__footer">
                             <a
@@ -74,7 +64,6 @@ get_header(); ?>
             </div>
 
             <div class="card">
-                <h4 class="card__header">sdfsdf</h4>
                 <div class="card__body content">
                     <?php the_content(); ?>
                 </div>

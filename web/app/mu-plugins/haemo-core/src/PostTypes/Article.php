@@ -43,6 +43,9 @@ class Article
                 'publicly_queryable' => true,
                 'supports'           => [
                     'title',
+                    'editor',
+                    'thumbnail',
+                    'custom-fields',
                 ],
             ]
         );

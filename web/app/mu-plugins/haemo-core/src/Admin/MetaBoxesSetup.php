@@ -4,18 +4,17 @@
  * Setup metaboxes
  *
  * @author Yaroslav Popov <ed.creater@gmail.com>
- * @package HaemoCore
  */
 
 namespace HaemoCore\Admin;
 
 use HaemoCore\Admin\MetaBoxes\BoxShortname;
 use HaemoCore\Admin\MetaBoxes\MetaboxSeo;
+use HaemoCore\Admin\MetaBoxes\OptionsArticle;
 use HaemoCore\Admin\MetaBoxes\OptionsCategory;
 use HaemoCore\Admin\MetaBoxes\OptionsMenu;
 use HaemoCore\Admin\MetaBoxes\OptionsPage;
 use HaemoCore\Admin\MetaBoxes\OptionsVideo;
-use HaemoCore\Admin\MetaBoxes\OptionsYear;
 
 /**
  * Initialize metaboxes classes
@@ -30,12 +29,13 @@ class MetaBoxesSetup
         // add_filter('acf/settings/show_admin', '__return_false');
         // add_action('acf/input/admin_head', array( $this, 'sc_acf_admin_head' ));
 
-        new BoxShortname();
-        new OptionsVideo();
-        new OptionsPage();
-        new OptionsCategory();
-        new OptionsMenu();
-        new MetaboxSeo();
+        new BoxShortname;
+        new OptionsVideo;
+        new OptionsArticle;
+        new OptionsPage;
+        new OptionsCategory;
+        new OptionsMenu;
+        new MetaboxSeo;
     }
 
     /**
@@ -43,20 +43,18 @@ class MetaBoxesSetup
      *
      * @return void
      */
-    function sc_acf_admin_head()
+    public function sc_acf_admin_head()
     {
         ?>
         <script type="text/javascript">
-            (function ($) {
+			(function ($) {
 
-                $(document).ready(function () {
+				$(document).ready(function () {
+					$('.layout').addClass('-collapsed');
+					$('.acf-postbox').addClass('closed');
+				});
 
-                    $('.layout').addClass('-collapsed');
-                    $('.acf-postbox').addClass('closed');
-
-                });
-
-            })(jQuery);
+			})(jQuery);
         </script>
         <?php
     }

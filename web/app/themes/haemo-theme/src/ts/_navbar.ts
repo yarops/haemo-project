@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.js-navbar-panel');
 
-    console.log(navbar);
     if (navbar === null) {
         return;
     }
