@@ -1,0 +1,1 @@
+/home/yarops/web/vhs/haemoblock.local/public_html/app/plugins/query-monitor/wp-content/db.php
