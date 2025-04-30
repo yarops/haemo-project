@@ -1,0 +1,23 @@
+{
+  "src/img/404.webp": {
+    "file": "img/404.webp",
+    "src": "src/img/404.webp"
+  },
+  "src/img/logo_157x36.webp": {
+    "file": "img/logo_157x36.webp",
+    "src": "src/img/logo_157x36.webp"
+  },
+  "src/svg/placeholder.svg": {
+    "file": "svg/placeholder.svg",
+    "src": "src/svg/placeholder.svg"
+  },
+  "src/ts/app.ts": {
+    "file": "js/app.js",
+    "name": "app",
+    "src": "src/ts/app.ts",
+    "isEntry": true,
+    "css": [
+      "css/app.css"
+    ]
+  }
+}
