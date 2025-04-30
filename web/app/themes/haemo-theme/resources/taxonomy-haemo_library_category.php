@@ -26,6 +26,7 @@ $video_query = new \WP_Query([
         ],
     ],
 ]);
+$videoNav = new \App\Modules\Paginate($video_query);
 
 $article_query = new \WP_Query([
     'post_type'      => 'haemo_article',
@@ -38,6 +39,7 @@ $article_query = new \WP_Query([
         ],
     ],
 ]);
+$articleNav = new \App\Modules\Paginate($article_query);
 
 get_header(); ?>
     <main class="main js-main">
@@ -60,6 +62,9 @@ get_header(); ?>
                     ?>
                 <?php endwhile; ?>
             </div>
+            <div class="video-grid__nav">
+                <?php $videoNav->display(); ?>
+            </div>
         </div>
 
         <h4 class="section-title"><?php echo __('Articles', 'haemo'); ?></h4>
@@ -67,17 +72,17 @@ get_header(); ?>
         <div class="card">
             <table class="table table-striped articles-table">
                 <thead>
-                    <tr>
-                        <th><?php echo __('Title', 'haemo'); ?></th>
-                        <th><?php echo __('Date', 'haemo'); ?></th>
-                        <th><?php echo __('Actions', 'haemo'); ?></th>
-                    </tr>
+                <tr>
+                    <th><?php echo __('Title', 'haemo'); ?></th>
+                    <th><?php echo __('Date', 'haemo'); ?></th>
+                    <th><?php echo __('Actions', 'haemo'); ?></th>
+                </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    while ($article_query->have_posts()) :
-                        $article_query->the_post();
-                        ?>
+                <?php
+                while ($article_query->have_posts()) :
+                    $article_query->the_post();
+                    ?>
                     <tr>
                         <td>
                             <a href="<?php the_permalink(); ?>" class="articles-table__link">
@@ -91,9 +96,11 @@ get_header(); ?>
                             </a>
                         </td>
                     </tr>
-                    <?php endwhile; ?>
+                <?php endwhile; ?>
                 </tbody>
             </table>
+
+            <?php $articleNav->display(); ?>
         </div>
     </main>
 <?php
