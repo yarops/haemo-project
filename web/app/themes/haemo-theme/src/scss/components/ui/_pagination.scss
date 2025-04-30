@@ -1,0 +1,61 @@
+@use "@vars/base";
+@use "@vars/mixins";
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 2rem 0 0;
+  text-align: center;
+
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  a,
+  span {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 2px solid var(--app-color-accent);
+    border-radius: base.$border-radius-base;
+    background-color: transparent;
+    color: var(--app-color-accent);
+    cursor: pointer;
+    font: 400 1.15rem / 1 base.$font-family-headings;
+    text-decoration: none;
+
+    @include mixins.transition;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &.next,
+    &.prev {
+      padding: calc(0.75rem + 1px) 0.5rem calc(0.75rem - 1px);
+    }
+  }
+
+  a:active,
+  a:focus,
+  a:hover,
+  span.current {
+    background-color: var(--app-color-accent);
+    color: #000;
+
+    .icon {
+      fill: var(--app-bg);
+    }
+  }
+}
