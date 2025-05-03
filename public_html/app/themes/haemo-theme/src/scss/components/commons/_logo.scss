@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  flex-flow: column nowrap;
+  color: var(--app-color-link);
+  font-weight: 700;
+  gap: 1rem;
+  text-decoration: none;
+
+  .accent {
+    color: var(--app-color-accent);
+  }
+}

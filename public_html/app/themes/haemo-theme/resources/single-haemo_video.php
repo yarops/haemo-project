@@ -9,8 +9,6 @@
 
 global $wp_query;
 
-$paged = get_query_var( 'paged' );
-
 $breadcrumbs = new \App\Modules\Breadcrumbs();
 $pagination  = new \App\Modules\Paginate( $wp_query );
 
@@ -35,8 +33,6 @@ while ( have_posts() ) :
 						data-setup='{"fluid": true}'
 					>
 						<source src="<?php echo esc_url( $video_link ); ?>" type="video/mp4"></source>
-						<!--                <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>-->
-						<!--                <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>-->
 						<p class="vjs-no-js">
 							To view this video please enable JavaScript, and consider upgrading to a
 							web browser that
@@ -56,20 +52,20 @@ while ( have_posts() ) :
 						</div>
 						<div class="card__footer">
 							<a
-								href="<?php echo $disk_link; ?>"
+								href="<?php echo esc_url( $disk_link ); ?>"
 								class="btn btn--primary"
 								target="_blank"
-								title="<?php echo __( 'Download', 'haemo' ); ?>"
+								title="<?php echo esc_html__( 'Download', 'haemo' ); ?>"
 							>
-								<?php echo __( 'Download', 'haemo' ); ?>
+								<?php echo esc_html__( 'Download', 'haemo' ); ?>
 							</a>
 							<a
 								href="#"
 								class="btn btn--link js-copy-link"
 								target="_blank"
-								title="<?php echo __( 'Copy link', 'haemo' ); ?>"
+								title="<?php echo esc_html__( 'Copy link', 'haemo' ); ?>"
 							>
-								<?php echo __( 'Copy link', 'haemo' ); ?>
+								<?php echo esc_html__( 'Copy link', 'haemo' ); ?>
 							</a>
 						</div>
 					</div>
