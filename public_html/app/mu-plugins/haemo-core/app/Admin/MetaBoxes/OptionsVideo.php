@@ -42,9 +42,18 @@ class OptionsVideo
                         'key'               => 'haemo_video_link',
                         'label'             => 'Link to video',
                         'name'              => 'video_link',
+                        'type'              => 'text',
+                        'default_value'     => '',
+                        'rows'              => 1,
+                    ],
+                    [
+                        'key'               => 'haemo_video_public_link',
+                        'label'             => 'Public Link to video',
+                        'name'              => 'video_public_link',
                         'type'              => 'textarea',
                         'default_value'     => '',
                         'rows'              => 1,
+                        // 'required'          => true,
                     ],
                     [
                         'key'               => 'haemo_video_preview',

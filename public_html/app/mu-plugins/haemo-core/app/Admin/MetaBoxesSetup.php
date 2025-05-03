@@ -9,6 +9,7 @@
 namespace HaemoCore\Admin;
 
 use HaemoCore\Admin\MetaBoxes\BoxShortname;
+use HaemoCore\Admin\MetaBoxes\Extra\VideoLinkPublic;
 use HaemoCore\Admin\MetaBoxes\MetaboxSeo;
 use HaemoCore\Admin\MetaBoxes\OptionsArticle;
 use HaemoCore\Admin\MetaBoxes\OptionsCategory;
@@ -29,13 +30,14 @@ class MetaBoxesSetup
         // add_filter('acf/settings/show_admin', '__return_false');
         // add_action('acf/input/admin_head', array( $this, 'sc_acf_admin_head' ));
 
-        new BoxShortname;
-        new OptionsVideo;
-        new OptionsArticle;
-        new OptionsPage;
-        new OptionsCategory;
-        new OptionsMenu;
-        new MetaboxSeo;
+        new BoxShortname();
+        new OptionsVideo();
+        new OptionsArticle();
+        new OptionsPage();
+        new OptionsCategory();
+        new OptionsMenu();
+        new MetaboxSeo();
+        new VideoLinkPublic();
     }
 
     /**
@@ -47,14 +49,14 @@ class MetaBoxesSetup
     {
         ?>
         <script type="text/javascript">
-			(function ($) {
+            (function ($) {
 
-				$(document).ready(function () {
-					$('.layout').addClass('-collapsed');
-					$('.acf-postbox').addClass('closed');
-				});
+                $(document).ready(function () {
+                    $('.layout').addClass('-collapsed');
+                    $('.acf-postbox').addClass('closed');
+                });
 
-			})(jQuery);
+            })(jQuery);
         </script>
         <?php
     }

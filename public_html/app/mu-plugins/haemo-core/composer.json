@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "HaemoCore\\": "src/"
+      "HaemoCore\\": "app/"
     },
     "files": [
       "vendor/redux-framework/redux-core/framework.php"

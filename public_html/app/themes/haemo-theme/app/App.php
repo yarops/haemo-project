@@ -21,98 +21,94 @@ use function App\Utils\get_setting;
 /**
  * App class of App
  */
-class App
-{
-    /**
-     * Environment object
-     *
-     * @var object
-     */
-    public $env;
+class App {
 
-    /**
-     * App path
-     *
-     * @var string
-     */
-    public $appPath;
 
-    /**
-     * Images object
-     *
-     * @var images
-     */
-    public $images;
+	/**
+	 * Environment object
+	 *
+	 * @var object
+	 */
+	public $env;
 
-    /**
-     * Comments object
-     *
-     * @var object
-     */
-    public $comments;
+	/**
+	 * App path
+	 *
+	 * @var string
+	 */
+	public $appPath;
 
-    /**
-     * Recaptcha object
-     *
-     * @var object
-     */
-    public $recaptcha;
+	/**
+	 * Images object
+	 *
+	 * @var images
+	 */
+	public $images;
 
-    /**
-     * Rating object
-     *
-     * @var object[]
-     */
-    public $queryArgs;
+	/**
+	 * Comments object
+	 *
+	 * @var object
+	 */
+	public $comments;
 
-    /**
-     * Instance of app.
-     *
-     * @var object
-     */
-    private static $instance;
+	/**
+	 * Recaptcha object
+	 *
+	 * @var object
+	 */
+	public $recaptcha;
 
-    /**
-     * Construct instance off App class
-     */
-    public function __construct()
-    {
-        require_once "Utils/theme-functions.php";
+	/**
+	 * Rating object
+	 *
+	 * @var object[]
+	 */
+	public $queryArgs;
 
-        $this->appPath = trailingslashit(__DIR__);
-        $this->env = new Env();
-        $this->images = new Images();
-        $this->comments = new Comments();
-        $this->recaptcha = new Recaptcha();
+	/**
+	 * Instance of app.
+	 *
+	 * @var object
+	 */
+	private static $instance;
 
-        new LibraryController();
-        new Assets();
-        new Mailsender();
+	/**
+	 * Construct instance off App class
+	 */
+	public function __construct() {
+		$this->appPath   = trailingslashit( __DIR__ );
+		$this->env       = new Env();
+		$this->images    = new Images();
+		$this->comments  = new Comments();
+		$this->recaptcha = new Recaptcha();
 
-        add_action('after_setup_theme', [$this, 'loadTextdomain']);
-    }
+		new LibraryController();
+		new Assets();
+		new Mailsender();
 
-    /**
-     * Access method for the plugin.
-     *
-     * @return App
-     */
-    public static function instance()
-    {
-        if (is_null(static::$instance)) {
-            static::$instance = new static();
-        }
+		add_action( 'after_setup_theme', array( $this, 'loadTextdomain' ) );
+	}
 
-        return static::$instance;
-    }
+	/**
+	 * Access method for the plugin.
+	 *
+	 * @return App
+	 */
+	public static function instance() {
+		if ( is_null( static::$instance ) ) {
+			static::$instance = new static();
+		}
 
-    /**
-     * Load theme textdomain
-     *
-     * @return void
-     */
-    public function loadTextdomain(): void
-    {
-        load_theme_textdomain('haemo', get_template_directory() . '/languages');
-    }
+		return static::$instance;
+	}
+
+	/**
+	 * Load theme textdomain
+	 *
+	 * @return void
+	 */
+	public function loadTextdomain(): void {
+		load_theme_textdomain( 'haemo', get_template_directory() . '/languages' );
+	}
 }

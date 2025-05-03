@@ -1,5 +1,7 @@
 .video-js {
+  aspect-ratio: 16 / 9;
   max-width: 100%;
+  height: auto !important;
 }
 
 .vjs-poster img {

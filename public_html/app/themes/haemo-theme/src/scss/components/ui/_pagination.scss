@@ -31,14 +31,14 @@
     background-color: transparent;
     color: var(--app-color-accent);
     cursor: pointer;
-    font: 400 1.15rem / 1 base.$font-family-headings;
+    font: 400 1rem / 1 base.$font-family-headings;
     text-decoration: none;
 
     @include mixins.transition;
 
     .icon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.25rem;
+      height: 1.25rem;
     }
 
     &.next,
@@ -52,7 +52,7 @@
   a:hover,
   span.current {
     background-color: var(--app-color-accent);
-    color: #000;
+    color: #fff;
 
     .icon {
       fill: var(--app-bg);

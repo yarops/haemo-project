@@ -36,11 +36,30 @@
       <path value="$PROJECT_DIR$/vendor/roots/bedrock-autoloader" />
       <path value="$PROJECT_DIR$/vendor/oscarotero/env" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/public_html/app/themes/haemo-theme/vendor/chillerlan/php-settings-container" />
+      <path value="$PROJECT_DIR$/public_html/app/themes/haemo-theme/vendor/chillerlan/php-qrcode" />
+      <path value="$PROJECT_DIR$/public_html/app/themes/haemo-theme/vendor/composer" />
+      <path value="$PROJECT_DIR$/public_html/app/plugins/query-monitor/vendor/composer" />
+      <path value="$PROJECT_DIR$/public_html/app/plugins/wps-hide-login/vendor/composer" />
+      <path value="$PROJECT_DIR$/public_html/app/plugins/advanced-custom-fields/vendor/composer" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/redux-framework/redux-core" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/redux-framework/redux-templates" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/redux-framework/ReduxCore" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/composer" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/oomphinc/composer-installers-extender" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/tgmpa/tgm-plugin-activation" />
+      <path value="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/redux-framework/sample" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/public_html/app/mu-plugins/haemo-core/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />

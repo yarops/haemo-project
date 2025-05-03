@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="LaravelPint">
+    <laravel_pint_settings>
+      <laravel_pint_by_interpreter asDefaultInterpreter="true" interpreter_id="8f0d094f-8715-416a-a892-365cf51b4fd5">
+        <option name="timeout" value="30000" />
+      </laravel_pint_by_interpreter>
+    </laravel_pint_settings>
+  </component>
   <component name="MessDetector">
     <phpmd_settings>
       <phpmd_by_interpreter asDefaultInterpreter="true" interpreter_id="8f0d094f-8715-416a-a892-365cf51b4fd5" timeout="30000" />
@@ -12,7 +19,7 @@
     <option name="transferred" value="true" />
   </component>
   <component name="PHPCodeSnifferOptionsConfiguration">
-    <option name="codingStandard" value="PSR12" />
+    <option name="codingStandard" value="WordPress" />
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
@@ -32,6 +39,7 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
+      <path value="$PROJECT_DIR$/../../mu-plugins/haemo-core" />
       <path value="$PROJECT_DIR$/../../plugins/advanced-custom-fields" />
       <path value="$PROJECT_DIR$/../../../wp" />
       <path value="$PROJECT_DIR$/vendor/composer" />

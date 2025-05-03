@@ -33,13 +33,13 @@
       <path value="$PROJECT_DIR$/../../../wp-admin" />
       <path value="$PROJECT_DIR$/../../../wp-includes" />
       <path value="$PROJECT_DIR$/vendor/redux-framework/redux-core" />
-      <path value="$PROJECT_DIR$/vendor/redux-framework/sample" />
-      <path value="$PROJECT_DIR$/vendor/tgmpa/tgm-plugin-activation" />
-      <path value="$PROJECT_DIR$/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/vendor/redux-framework/redux-templates" />
+      <path value="$PROJECT_DIR$/vendor/redux-framework/ReduxCore" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/oomphinc/composer-installers-extender" />
-      <path value="$PROJECT_DIR$/vendor/redux-framework/ReduxCore" />
-      <path value="$PROJECT_DIR$/vendor/redux-framework/redux-templates" />
+      <path value="$PROJECT_DIR$/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/vendor/tgmpa/tgm-plugin-activation" />
+      <path value="$PROJECT_DIR$/vendor/redux-framework/sample" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">

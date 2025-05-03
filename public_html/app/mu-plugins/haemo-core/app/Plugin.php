@@ -9,11 +9,20 @@
 
 namespace HaemoCore;
 
+use HaemoCore\Admin\AdminAssets;
 use HaemoCore\Admin\MetaBoxesSetup;
 use HaemoCore\Admin\ThemeOptions;
+use HaemoCore\Utils\AdminEnv;
 
 class Plugin
 {
+    /**
+     * Environment object
+     *
+     * @var object
+     */
+    public object $adminEnv;
+
     public array $modules = [];
 
     /**
@@ -26,6 +35,9 @@ class Plugin
      */
     public function __construct()
     {
+        $this->adminEnv = new AdminEnv();
+        new AdminAssets();
+
         add_action('init', [$this, 'initLanguages']);
         add_action('plugins_loaded', [$this, 'initOptions']);
 

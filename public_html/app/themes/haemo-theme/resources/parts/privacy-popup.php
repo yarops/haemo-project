@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Privacy popup part
  *
@@ -6,19 +7,26 @@
  * @package haemo
  * @author Yaroslav Popov <ed.creater@gmail.com>
  */
+
+use HaemoCore\Utils\Functions;
+
 ?>
 <div class="privacy-popup privacy hidden">
 	<div class="privacy-popup__inner">
-		<svg class="privacy-popup__lock" width="228px" height="280px">
-			<use xlink:href="#icon-lock"></use>
-		</svg>
 		<div class="privacy-popup__content">
-			<?php echo \App\Utils\get_setting( 'swco_privacy_content' ); ?>
-			&nbsp;<a href="<?php echo get_privacy_policy_url(); ?>">[<?php echo __( 'privacy policy', 'haemo' ); ?>]</a>
+			<?php echo esc_html( Functions::getSetting( 'haemo_privacy_content' ) ); ?>
+			<br>
+			<a href="<?php echo esc_url( get_privacy_policy_url() ); ?>">
+				<?php echo esc_html( __( 'privacy policy', 'haemo' ) ); ?>
+			</a>
 		</div>
 		<div class="privacy-popup__links">
-			<a href="#" class="btn btn--accent btn--small js-policy-agree"><?php echo __( 'Accept', 'haemo' ); ?></a>
-			<a href="#" class="btn btn--link btn--small js-policy-agree"><?php echo __( 'Decline', 'haemo' ); ?></a>
+			<a href="#" class="btn btn--accent btn--small js-policy-agree">
+				<?php echo esc_html( __( 'Accept', 'haemo' ) ); ?>
+			</a>
+			<a href="#" class="btn btn--link btn--small js-policy-agree">
+				<?php echo esc_html( __( 'Decline', 'haemo' ) ); ?>
+			</a>
 		</div>
 	</div>
 </div>

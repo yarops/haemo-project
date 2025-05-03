@@ -5,24 +5,13 @@
 .privacy-popup {
   position: fixed;
   z-index: 9999;
-  bottom: 10px;
-  left: 50%;
+  bottom: 1rem;
+  left: 1rem;
   overflow: hidden;
   border-radius: base.$border-radius-base;
   background-color: var(--app-bg-accent);
   box-shadow: 0 0 3px 0 #fff;
   font-size: 1rem;
-  transform: translateX(-50%);
-
-  &__lock {
-    position: absolute;
-    z-index: -1;
-    top: 15px;
-    right: 15px;
-    width: auto;
-    height: 100%;
-    opacity: 0.5;
-  }
 
   &__inner {
     display: flex;
