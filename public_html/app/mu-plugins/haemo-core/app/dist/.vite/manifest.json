@@ -1,0 +1,11 @@
+{
+  "src/ts/core.ts": {
+    "file": "scripts/core.js",
+    "name": "core",
+    "src": "src/ts/core.ts",
+    "isEntry": true,
+    "css": [
+      "styles/core.css"
+    ]
+  }
+}
