@@ -1,0 +1,33 @@
+@use "@vars/media";
+
+.footer-nav {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+
+  @media screen and (width >= media.$screen-sm) {
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    position: relative;
+
+    @media screen and (width >= media.$screen-sm) {
+      &:not(:first-child) {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -0.75rem;
+          content: '/';
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: var(--app-color-link);
+    text-decoration: none;
+  }
+}

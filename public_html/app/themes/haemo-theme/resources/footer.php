@@ -14,9 +14,9 @@ use App\Utils;
 <footer class="footer container">
 	<div class="footer__menu">
 		<?php
-		if ( has_nav_menu( 'footer_menu' ) ) {
+		if ( has_nav_menu( 'footer' ) ) {
 			$args = array(
-				'theme_location'  => 'footer_menu',
+				'theme_location'  => 'footer',
 				'container'       => '',
 				'container_class' => '',
 				'container_id'    => '',
