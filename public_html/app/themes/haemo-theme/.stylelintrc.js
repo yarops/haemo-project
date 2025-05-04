@@ -7,6 +7,8 @@ const config = {
         'selector-pseudo-class-no-unknown': null,
         'no-descending-specificity': null,
         'no-empty-source': null,
+        "scss/double-slash-comment-whitespace-inside": null, // Used deprecated args
+        'media-feature-name-no-unknown': null, // For vars in media
         'scss/at-rule-no-unknown': [
             true,
             {

@@ -1,4 +1,8 @@
+@use "@vars/mixins";
+
 .card {
+  $this: &;
+
   --app-card-border-radius: var(--app-border-radius);
   --app-card-bg: #fff;
   --app-card-color: var(--app-color-text);
@@ -37,10 +41,18 @@
     a {
       color: var(--app-heading-color);
       text-decoration: none;
+
+      @include mixins.link-card;
     }
   }
 
   &__footer {
     padding: 1rem 1.25rem;
+  }
+
+  &:hover {
+    #{$this}__thumb {
+      transform: scale(1.1);
+    }
   }
 }

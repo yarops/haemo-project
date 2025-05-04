@@ -8,6 +8,7 @@
  */
 
 use App\Utils;
+
 ?>
 
 <footer class="footer container">
@@ -26,7 +27,7 @@ use App\Utils;
 		}
 		?>
 	</div>
-	<?php echo Utils\Html::get_copyright(); ?>
+	<?php echo esc_html( Utils\Html::get_copyright() ); ?>
 </footer>
 
 <?php get_template_part( 'parts/privacy-popup' ); ?>
