@@ -27,7 +27,7 @@ use App\Utils;
 		}
 		?>
 	</div>
-	<?php echo esc_html( Utils\Html::get_copyright() ); ?>
+	<?php get_template_part( 'parts/commons/copyright' ); ?>
 </footer>
 
 <?php get_template_part( 'parts/privacy-popup' ); ?>

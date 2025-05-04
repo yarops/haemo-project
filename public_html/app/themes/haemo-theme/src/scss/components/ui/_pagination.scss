@@ -5,7 +5,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 2rem 0 0;
+  margin: 1rem 0 0;
   text-align: center;
 
   ul {
@@ -20,13 +20,13 @@
   a,
   span {
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    min-width: 2rem;
+    height: 2rem;
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    border: 2px solid var(--app-color-accent);
+    padding: 0 0.25rem;
+    border: 1px solid var(--app-color-accent);
     border-radius: var(--app-border-radius);
     background-color: transparent;
     color: var(--app-color-accent);

@@ -33,20 +33,4 @@ class Html {
 		</svg>
 		HTML;
 	}
-
-	/**
-	 * Get copyright
-	 *
-	 * @return string
-	 */
-	public static function get_copyright(): string {
-		$result = '';
-
-		$copy       = Functions::getSetting( 'swco_copyright' );
-		$copy_label = '© ' . gmdate( 'Y' ) . ' / ' . get_bloginfo( 'name' );
-
-		return <<<HTML
-        <div class="copyright">{$copy_label}. {$copy}</div>
-        HTML;
-	}
 }

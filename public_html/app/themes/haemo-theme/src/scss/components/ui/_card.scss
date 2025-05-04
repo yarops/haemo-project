@@ -7,16 +7,18 @@
   --app-card-bg: #fff;
   --app-card-color: var(--app-color-text);
 
+  position: relative;
   display: flex;
+  overflow: hidden;
   flex-flow: column nowrap;
   border-radius: var(--app-card-border-radius);
-  margin-bottom: 1.5rem;
   background-color: var(--app-card-bg);
   box-shadow: var(--app-box-shadow);
 
   &__thumb {
     border-top-left-radius: var(--app-card-border-radius);
     border-top-right-radius: var(--app-card-border-radius);
+    transition: 0.2s ease-in-out;
   }
 
   &__body {
@@ -41,6 +43,7 @@
     a {
       color: var(--app-heading-color);
       text-decoration: none;
+      transition: 0.2s ease-in-out;
 
       @include mixins.link-card;
     }
@@ -52,7 +55,13 @@
 
   &:hover {
     #{$this}__thumb {
-      transform: scale(1.1);
+      transform: scale(1.05);
+    }
+
+    #{$this}__title {
+      a {
+        color: var(--app-color-accent);
+      }
     }
   }
 }
