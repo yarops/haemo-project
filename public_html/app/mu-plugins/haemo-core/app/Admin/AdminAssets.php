@@ -88,15 +88,20 @@ class AdminAssets
             );
         }
 
+        $localize_params = [
+            'url'   => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('core-nonce'),
+        ];
+
+        if (!empty($post)) {
+            $localize_params['postId'] = $post->ID;
+        }
+
         wp_enqueue_script('core');
         wp_localize_script(
             'core',
             'core',
-            [
-                'url'   => admin_url('admin-ajax.php'),
-                'nonce' => wp_create_nonce('core-nonce'),
-                'postID' => $post->ID
-            ]
+            $localize_params
         );
     }
 

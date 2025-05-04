@@ -39,7 +39,7 @@ class VideoLink {
             }
 
             const dataRequest = {
-                postId: this.core.postID,
+                postId: this.core.postId,
                 link: this.link
             }
 
