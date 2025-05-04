@@ -6,28 +6,22 @@
  * @package haemo
  */
 
-$paged = get_query_var('page');
-
 $breadcrumbs = new \App\Modules\Breadcrumbs();
 
 get_header(); ?>
-<?php while (have_posts()) :
-    the_post();
-    ?>
-	<section class="page-layout container">
-		<div class="page-layout__ads">
-			<?php app()->promo->display('side_left'); ?>
-		</div>
-		<div class="page-layout__content">
-			<h1 class="section-title"><?php the_title(); ?></h1>
-			<div class="content-widget content">
-				<?php the_content(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+	?>
+	<main class="main">
+		<div class="content-area">
+			<div class="card">
+				<div class="card__body content">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
-		<div class="page-layout__ads">
-			<?php app()->promo->display('side_right'); ?>
-		</div>
-	</section>
+	</main>
 
 <?php endwhile; ?>
 <?php
