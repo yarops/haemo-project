@@ -73,7 +73,8 @@ const config: UserConfig = {
     plugins: [
         copy({
             targets: [
-                // { src: 'src/img/**/*', dest: 'resources/dist/img' },
+                { src: 'src/svg/**/*', dest: 'resources/dist/svg' },
+                { src: 'src/img/**/*', dest: 'resources/dist/img' },
                 { src: 'src/favicons/**/*', dest: 'resources/dist/favicons' }
             ],
             verbose: true,
